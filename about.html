@@ -1,0 +1,1732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Learn more about CodingWalle, our mission, vision and learning philosophy.">
+
+    <title>CodingWalle | About Us</title>
+
+
+    <style>
+
+        /* =====================================================
+           CODINGWALLE - ABOUT PAGE
+           Premium Dark Coding Theme
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: #050810;
+            color: #ffffff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+
+        /* =====================================================
+           BACKGROUND
+        ===================================================== */
+
+        body::before {
+            content: "";
+
+            position: fixed;
+
+            width: 500px;
+            height: 500px;
+
+            top: -220px;
+            left: -220px;
+
+            background: #00e5ff;
+
+            filter: blur(180px);
+
+            opacity: 0.06;
+
+            z-index: -1;
+        }
+
+
+        body::after {
+            content: "";
+
+            position: fixed;
+
+            width: 500px;
+            height: 500px;
+
+            right: -250px;
+            bottom: -220px;
+
+            background: #7c4dff;
+
+            filter: blur(180px);
+
+            opacity: 0.07;
+
+            z-index: -1;
+        }
+
+
+        /* =====================================================
+           NAVBAR
+        ===================================================== */
+
+        header {
+            position: sticky;
+
+            top: 0;
+
+            z-index: 1000;
+
+            background: rgba(5, 8, 16, 0.88);
+
+            backdrop-filter: blur(18px);
+
+            border-bottom: 1px solid #192438;
+        }
+
+
+        .navbar {
+            max-width: 1250px;
+
+            margin: auto;
+
+            padding: 15px 25px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+        }
+
+
+        .logo {
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            font-size: 24px;
+
+            font-weight: 800;
+        }
+
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 10px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #00e5ff,
+                    #7c4dff
+                );
+
+            color: #050810;
+
+            font-weight: 900;
+        }
+
+
+        .logo span {
+            background:
+                linear-gradient(
+                    90deg,
+                    #00e5ff,
+                    #a970ff
+                );
+
+            -webkit-background-clip: text;
+
+            color: transparent;
+        }
+
+
+        .nav-links {
+            display: flex;
+
+            gap: 25px;
+        }
+
+
+        .nav-links a {
+            color: #919db2;
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+            transition: 0.3s;
+        }
+
+
+        .nav-links a:hover,
+        .nav-links .active {
+            color: #00e5ff;
+        }
+
+
+        .nav-button {
+            padding: 11px 18px;
+
+            border-radius: 9px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #00e5ff,
+                    #7c4dff
+                );
+
+            font-size: 13px;
+
+            font-weight: 800;
+
+            transition: 0.3s;
+        }
+
+
+        .nav-button:hover {
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 10px 30px
+                rgba(0,229,255,0.18);
+        }
+
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .about-hero {
+            max-width: 1200px;
+
+            margin: auto;
+
+            padding: 100px 25px 90px;
+
+            text-align: center;
+        }
+
+
+        .hero-label {
+            color: #00e5ff;
+
+            font-size: 12px;
+
+            font-weight: 900;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 18px;
+        }
+
+
+        .about-hero h1 {
+            font-size:
+                clamp(
+                    45px,
+                    6vw,
+                    75px
+                );
+
+            line-height: 1;
+
+            letter-spacing: -3px;
+
+            margin-bottom: 25px;
+        }
+
+
+        .about-hero h1 span {
+            background:
+                linear-gradient(
+                    90deg,
+                    #00e5ff,
+                    #8b5cf6,
+                    #c084fc
+                );
+
+            -webkit-background-clip: text;
+
+            color: transparent;
+        }
+
+
+        .about-hero p {
+            max-width: 750px;
+
+            margin: auto;
+
+            color: #7f8ca2;
+
+            font-size: 17px;
+
+            line-height: 1.8;
+        }
+
+
+        /* =====================================================
+           STATS
+        ===================================================== */
+
+        .stats {
+            max-width: 1100px;
+
+            margin: auto;
+
+            padding: 0 25px 100px;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 16px;
+        }
+
+
+        .stat {
+            padding: 25px;
+
+            text-align: center;
+
+            background: #0a101c;
+
+            border: 1px solid #1c293d;
+
+            border-radius: 15px;
+
+            transition: 0.3s;
+        }
+
+
+        .stat:hover {
+            transform: translateY(-5px);
+
+            border-color: #00e5ff;
+        }
+
+
+        .stat h2 {
+            color: #00e5ff;
+
+            font-size: 32px;
+
+            margin-bottom: 5px;
+        }
+
+
+        .stat p {
+            color: #69768b;
+
+            font-size: 13px;
+        }
+
+
+        /* =====================================================
+           STORY SECTION
+        ===================================================== */
+
+        .story {
+            max-width: 1200px;
+
+            margin: auto;
+
+            padding: 40px 25px 110px;
+
+            display: grid;
+
+            grid-template-columns:
+                0.9fr 1.1fr;
+
+            gap: 70px;
+
+            align-items: center;
+        }
+
+
+        .story-label {
+            color: #00e5ff;
+
+            font-size: 12px;
+
+            font-weight: 900;
+
+            letter-spacing: 2px;
+        }
+
+
+        .story h2 {
+            font-size: 43px;
+
+            line-height: 1.1;
+
+            letter-spacing: -2px;
+
+            margin:
+                12px 0
+                20px;
+        }
+
+
+        .story h2 span {
+            color: #00e5ff;
+        }
+
+
+        .story-text {
+            color: #7d899e;
+
+            line-height: 1.9;
+
+            margin-bottom: 17px;
+        }
+
+
+        /* =====================================================
+           CODE CARD
+        ===================================================== */
+
+        .code-card {
+            background: #090f1a;
+
+            border: 1px solid #202d42;
+
+            border-radius: 18px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 25px 70px
+                rgba(0,0,0,0.45);
+        }
+
+
+        .code-top {
+            height: 48px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            padding: 0 18px;
+
+            background: #0e1625;
+
+            border-bottom:
+                1px solid #202d42;
+        }
+
+
+        .dots {
+            display: flex;
+
+            gap: 7px;
+        }
+
+
+        .dot {
+            width: 11px;
+            height: 11px;
+
+            border-radius: 50%;
+
+            background: #34435a;
+        }
+
+
+        .filename {
+            color: #617087;
+
+            font-size: 12px;
+
+            font-family: monospace;
+        }
+
+
+        .code-body {
+            padding: 28px;
+
+            font-family: Consolas, monospace;
+
+            font-size: 14px;
+
+            line-height: 2;
+
+            color: #c5cfdf;
+        }
+
+
+        .purple {
+            color: #c792ea;
+        }
+
+
+        .blue {
+            color: #82aaff;
+        }
+
+
+        .green {
+            color: #c3e88d;
+        }
+
+
+        .orange {
+            color: #f78c6c;
+        }
+
+
+        .gray {
+            color: #56647a;
+        }
+
+
+        /* =====================================================
+           MISSION / VISION
+        ===================================================== */
+
+        .section {
+            max-width: 1200px;
+
+            margin: auto;
+
+            padding:
+                20px 25px
+                100px;
+        }
+
+
+        .section-heading {
+            text-align: center;
+
+            margin-bottom: 45px;
+        }
+
+
+        .section-label {
+            color: #00e5ff;
+
+            font-size: 12px;
+
+            font-weight: 900;
+
+            letter-spacing: 2px;
+        }
+
+
+        .section-heading h2 {
+            font-size: 42px;
+
+            letter-spacing: -1px;
+
+            margin-top: 10px;
+        }
+
+
+        .section-heading p {
+            color: #758298;
+
+            max-width: 650px;
+
+            margin:
+                10px auto 0;
+        }
+
+
+        .mission-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 20px;
+        }
+
+
+        .mission-card {
+            padding: 35px;
+
+            background: #0a101c;
+
+            border:
+                1px solid #1d2a3e;
+
+            border-radius: 17px;
+
+            transition: 0.35s;
+        }
+
+
+        .mission-card:hover {
+            transform: translateY(-7px);
+
+            border-color: #00e5ff;
+        }
+
+
+        .mission-icon {
+            width: 58px;
+            height: 58px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 14px;
+
+            background: #111b2b;
+
+            font-size: 27px;
+
+            margin-bottom: 20px;
+        }
+
+
+        .mission-card h3 {
+            font-size: 22px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .mission-card p {
+            color: #78859a;
+
+            line-height: 1.8;
+
+            font-size: 14px;
+        }
+
+
+        /* =====================================================
+           VALUES
+        ===================================================== */
+
+        .values-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 16px;
+        }
+
+
+        .value {
+            padding: 28px 22px;
+
+            background: #0a101c;
+
+            border: 1px solid #1c293d;
+
+            border-radius: 15px;
+
+            transition: 0.3s;
+        }
+
+
+        .value:hover {
+            transform: translateY(-6px);
+
+            border-color: #7c4dff;
+        }
+
+
+        .value-number {
+            color: #00e5ff;
+
+            font-family: monospace;
+
+            font-size: 12px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .value h3 {
+            margin-bottom: 8px;
+        }
+
+
+        .value p {
+            color: #748198;
+
+            font-size: 13px;
+
+            line-height: 1.7;
+        }
+
+
+        /* =====================================================
+           PHILOSOPHY
+        ===================================================== */
+
+        .philosophy {
+            max-width: 1050px;
+
+            margin: auto;
+
+            padding:
+                20px 25px
+                110px;
+
+            text-align: center;
+        }
+
+
+        .philosophy-box {
+            padding: 65px 30px;
+
+            border:
+                1px solid #25334a;
+
+            border-radius: 20px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(0,229,255,0.06),
+                    rgba(124,77,255,0.08)
+                );
+        }
+
+
+        .philosophy h2 {
+            font-size:
+                clamp(
+                    32px,
+                    5vw,
+                    50px
+                );
+
+            letter-spacing: -2px;
+
+            margin:
+                12px 0
+                15px;
+        }
+
+
+        .philosophy h2 span {
+            color: #00e5ff;
+        }
+
+
+        .philosophy p {
+            color: #77849a;
+
+            max-width: 700px;
+
+            margin: auto auto 28px;
+        }
+
+
+        .cta-button {
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            padding: 14px 22px;
+
+            border-radius: 9px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #00e5ff,
+                    #7c4dff
+                );
+
+            font-weight: 800;
+
+            transition: 0.3s;
+        }
+
+
+        .cta-button:hover {
+            transform: translateY(-4px);
+
+            box-shadow:
+                0 15px 35px
+                rgba(0,229,255,0.18);
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer {
+            border-top:
+                1px solid #182337;
+
+            padding:
+                50px 25px
+                25px;
+
+            text-align: center;
+        }
+
+
+        .footer-logo {
+            font-size: 24px;
+
+            font-weight: 800;
+
+            margin-bottom: 10px;
+        }
+
+
+        .footer-logo span {
+            color: #00e5ff;
+        }
+
+
+        .footer-text {
+            color: #657289;
+
+            margin-bottom: 25px;
+        }
+
+
+        .footer-links {
+            display: flex;
+
+            justify-content: center;
+
+            flex-wrap: wrap;
+
+            gap: 25px;
+
+            margin-bottom: 30px;
+        }
+
+
+        .footer-links a {
+            color: #7d899d;
+
+            font-size: 13px;
+
+            transition: 0.3s;
+        }
+
+
+        .footer-links a:hover {
+            color: #00e5ff;
+        }
+
+
+        .copyright {
+            border-top:
+                1px solid #182337;
+
+            padding-top: 20px;
+
+            color: #4f5c70;
+
+            font-size: 12px;
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media(max-width:900px) {
+
+            .nav-links {
+                display: none;
+            }
+
+
+            .story {
+                grid-template-columns: 1fr;
+            }
+
+
+            .values-grid {
+                grid-template-columns:
+                    repeat(2,1fr);
+            }
+
+
+            .stats {
+                grid-template-columns:
+                    repeat(2,1fr);
+            }
+
+        }
+
+
+        @media(max-width:600px) {
+
+            .navbar {
+                padding:
+                    12px 15px;
+            }
+
+
+            .logo {
+                font-size: 19px;
+            }
+
+
+            .logo-icon {
+                width: 34px;
+                height: 34px;
+            }
+
+
+            .nav-button {
+                padding:
+                    9px 12px;
+
+                font-size: 11px;
+            }
+
+
+            .about-hero {
+                padding:
+                    70px 18px;
+            }
+
+
+            .about-hero h1 {
+                font-size: 45px;
+
+                letter-spacing: -2px;
+            }
+
+
+            .stats {
+                grid-template-columns:
+                    1fr 1fr;
+
+                padding:
+                    0 18px 70px;
+            }
+
+
+            .story {
+                padding:
+                    20px 18px 80px;
+            }
+
+
+            .story h2 {
+                font-size: 35px;
+            }
+
+
+            .section {
+                padding:
+                    20px 18px 80px;
+            }
+
+
+            .section-heading h2 {
+                font-size: 34px;
+            }
+
+
+            .mission-grid,
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .philosophy {
+                padding:
+                    20px 15px 70px;
+            }
+
+
+            .philosophy-box {
+                padding:
+                    50px 20px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<header>
+
+    <nav class="navbar">
+
+
+        <a href="index.html"
+           class="logo">
+
+            <div class="logo-icon">
+                &lt;/&gt;
+            </div>
+
+            <span>
+                CodingWalle
+            </span>
+
+        </a>
+
+
+        <div class="nav-links">
+
+            <a href="index.html">
+                Index
+            </a>
+
+            <a href="home.html">
+                Home
+            </a>
+
+            <a href="about.html"
+               class="active">
+                About
+            </a>
+
+            <a href="courses.html">
+                Courses
+            </a>
+
+            <a href="reviews.html">
+                Reviews
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </div>
+
+
+        <a href="courses.html"
+           class="nav-button">
+
+            Start Learning →
+
+        </a>
+
+
+    </nav>
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="about-hero">
+
+
+    <div class="hero-label">
+        ABOUT CODINGWALLE
+    </div>
+
+
+    <h1>
+
+        We Believe
+        <span>Everyone Can Code.</span>
+
+    </h1>
+
+
+    <p>
+
+        CodingWalle is a learning platform created to make
+        technology education simple, practical and exciting.
+
+        Our goal is to help learners move from curiosity
+        to confidence — one line of code at a time.
+
+    </p>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     STATS
+===================================================== -->
+
+<div class="stats">
+
+
+    <div class="stat">
+
+        <h2>
+            05
+        </h2>
+
+        <p>
+            Learning Branches
+        </p>
+
+    </div>
+
+
+    <div class="stat">
+
+        <h2>
+            30+
+        </h2>
+
+        <p>
+            Courses
+        </p>
+
+    </div>
+
+
+    <div class="stat">
+
+        <h2>
+            100+
+        </h2>
+
+        <p>
+            Topics
+        </p>
+
+    </div>
+
+
+    <div class="stat">
+
+        <h2>
+            ∞
+        </h2>
+
+        <p>
+            Ideas To Build
+        </p>
+
+    </div>
+
+
+</div>
+
+
+
+<!-- =====================================================
+     OUR STORY
+===================================================== -->
+
+<section class="story">
+
+
+    <div>
+
+        <div class="story-label">
+            OUR STORY
+        </div>
+
+
+        <h2>
+
+            From Learning Code
+            To <span>Building Ideas.</span>
+
+        </h2>
+
+
+        <p class="story-text">
+
+            Coding can look complicated when you are just
+            starting. There are languages, frameworks,
+            tools and thousands of concepts to understand.
+
+        </p>
+
+
+        <p class="story-text">
+
+            CodingWalle is designed around a simple idea:
+            learning technology should feel structured,
+            practical and motivating.
+
+        </p>
+
+
+        <p class="story-text">
+
+            Instead of simply collecting tutorials,
+            CodingWalle focuses on learning paths,
+            practical concepts and the mindset needed
+            to become a developer.
+
+        </p>
+
+    </div>
+
+
+
+    <!-- CODE CARD -->
+
+    <div class="code-card">
+
+
+        <div class="code-top">
+
+            <div class="dots">
+
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+
+            </div>
+
+
+            <div class="filename">
+                codingwalle.js
+            </div>
+
+
+            <div></div>
+
+        </div>
+
+
+
+        <div class="code-body">
+
+            <div>
+                <span class="gray">
+                    // CodingWalle philosophy
+                </span>
+            </div>
+
+
+            <div>
+
+                <span class="purple">
+                    const
+                </span>
+
+                <span class="blue">
+                    learner
+                </span>
+
+                = {
+
+            </div>
+
+
+            <div>
+
+                &nbsp;&nbsp;curiosity:
+
+                <span class="green">
+                    true
+                </span>,
+
+            </div>
+
+
+            <div>
+
+                &nbsp;&nbsp;practice:
+
+                <span class="green">
+                    true
+                </span>,
+
+            </div>
+
+
+            <div>
+
+                &nbsp;&nbsp;creativity:
+
+                <span class="green">
+                    true
+                </span>,
+
+            </div>
+
+
+            <div>
+
+                &nbsp;&nbsp;fearOfCoding:
+
+                <span class="green">
+                    false
+                </span>
+
+            </div>
+
+
+            <div>
+                };
+            </div>
+
+
+            <br>
+
+
+            <div>
+
+                <span class="purple">
+                    function
+                </span>
+
+                <span class="blue">
+                    buildFuture
+                </span>() {
+
+            </div>
+
+
+            <div>
+
+                &nbsp;&nbsp;
+
+                <span class="purple">
+                    return
+                </span>
+
+                <span class="green">
+                    "Keep Learning 🚀"
+                </span>;
+
+            </div>
+
+
+            <div>
+                }
+            </div>
+
+
+            <br>
+
+
+            <div>
+
+                <span class="gray">
+                    // Your journey starts here.
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     MISSION & VISION
+===================================================== -->
+
+<section class="section">
+
+
+    <div class="section-heading">
+
+
+        <div class="section-label">
+            WHAT DRIVES US
+        </div>
+
+
+        <h2>
+            Mission & Vision
+        </h2>
+
+
+        <p>
+
+            Building a better way for learners to explore
+            the world of technology.
+
+        </p>
+
+
+    </div>
+
+
+
+    <div class="mission-grid">
+
+
+        <!-- MISSION -->
+
+        <div class="mission-card">
+
+
+            <div class="mission-icon">
+                🎯
+            </div>
+
+
+            <h3>
+                Our Mission
+            </h3>
+
+
+            <p>
+
+                Our mission is to make coding education
+                approachable and structured for learners
+                at different stages.
+
+                We want to encourage people to learn by
+                understanding concepts, practicing them
+                and creating something of their own.
+
+            </p>
+
+
+        </div>
+
+
+
+        <!-- VISION -->
+
+        <div class="mission-card">
+
+
+            <div class="mission-icon">
+                🚀
+            </div>
+
+
+            <h3>
+                Our Vision
+            </h3>
+
+
+            <p>
+
+                We envision a world where technology
+                learning is accessible, creative and
+                exciting.
+
+                CodingWalle aims to become a place where
+                learners can discover technologies,
+                develop useful skills and turn ideas
+                into projects.
+
+            </p>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     VALUES
+===================================================== -->
+
+<section class="section">
+
+
+    <div class="section-heading">
+
+
+        <div class="section-label">
+            OUR PRINCIPLES
+        </div>
+
+
+        <h2>
+            What We Believe
+        </h2>
+
+
+        <p>
+
+            The principles behind the CodingWalle learning
+            experience.
+
+        </p>
+
+
+    </div>
+
+
+
+    <div class="values-grid">
+
+
+        <div class="value">
+
+            <div class="value-number">
+                01 / SIMPLICITY
+            </div>
+
+            <h3>
+                Keep It Simple
+            </h3>
+
+            <p>
+
+                Complex technology becomes easier when
+                concepts are explained clearly and
+                step by step.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="value">
+
+            <div class="value-number">
+                02 / PRACTICE
+            </div>
+
+            <h3>
+                Learn By Doing
+            </h3>
+
+            <p>
+
+                Reading is only the beginning.
+                Practice helps turn knowledge into skill.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="value">
+
+            <div class="value-number">
+                03 / CREATIVITY
+            </div>
+
+            <h3>
+                Build Your Ideas
+            </h3>
+
+            <p>
+
+                Technology becomes exciting when you use
+                it to create something that is truly yours.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="value">
+
+            <div class="value-number">
+                04 / GROWTH
+            </div>
+
+            <h3>
+                Never Stop Learning
+            </h3>
+
+            <p>
+
+                Technology keeps changing.
+                A developer's strongest skill is the
+                willingness to keep learning.
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     LEARNING PHILOSOPHY
+===================================================== -->
+
+<section class="philosophy">
+
+
+    <div class="philosophy-box">
+
+
+        <div class="section-label">
+            THE CODINGWALLE MINDSET
+        </div>
+
+
+        <h2>
+
+            Learn Today.
+            <span>Build Tomorrow.</span>
+
+        </h2>
+
+
+        <p>
+
+            You don't need to know everything before you
+            start coding.
+
+            You only need the curiosity to begin,
+            the patience to practice and the courage
+            to build.
+
+        </p>
+
+
+        <a href="courses.html"
+           class="cta-button">
+
+            Explore Courses →
+
+        </a>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+
+    <div class="footer-logo">
+
+        <span>&lt;/&gt;</span>
+        CodingWalle
+
+    </div>
+
+
+    <p class="footer-text">
+
+        Learn. Code. Build. Become.
+
+    </p>
+
+
+    <div class="footer-links">
+
+
+        <a href="index.html">
+            Index
+        </a>
+
+
+        <a href="home.html">
+            Home
+        </a>
+
+
+        <a href="about.html">
+            About
+        </a>
+
+
+        <a href="courses.html">
+            Courses
+        </a>
+
+
+        <a href="reviews.html">
+            Reviews
+        </a>
+
+
+        <a href="contact.html">
+            Contact
+        </a>
+
+
+    </div>
+
+
+    <div class="copyright">
+
+        © 2026 CodingWalle.
+        All Rights Reserved.
+
+    </div>
+
+
+</footer>
+
+
+</body>
+</html>
