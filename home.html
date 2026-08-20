@@ -1,0 +1,1739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CodingWalle | Home</title>
+
+    <style>
+
+        /* =====================================================
+           CODINGWALLE HOME PAGE
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: #050810;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* =====================================================
+           BACKGROUND
+        ===================================================== */
+
+        body::before {
+            content: "";
+            position: fixed;
+            width: 500px;
+            height: 500px;
+            left: -250px;
+            top: 100px;
+            background: #00e5ff;
+            filter: blur(180px);
+            opacity: .06;
+            z-index: -1;
+        }
+
+        body::after {
+            content: "";
+            position: fixed;
+            width: 500px;
+            height: 500px;
+            right: -250px;
+            bottom: 100px;
+            background: #7c4dff;
+            filter: blur(180px);
+            opacity: .07;
+            z-index: -1;
+        }
+
+        /* =====================================================
+           NAVBAR
+        ===================================================== */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            background: rgba(5,8,16,.86);
+            backdrop-filter: blur(18px);
+
+            border-bottom: 1px solid #182337;
+        }
+
+        .navbar {
+            max-width: 1250px;
+            margin: auto;
+
+            padding: 15px 25px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            font-size: 24px;
+            font-weight: 800;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 10px;
+
+            background: linear-gradient(
+                135deg,
+                #00e5ff,
+                #7c4dff
+            );
+
+            color: #050810;
+            font-weight: 900;
+        }
+
+        .logo span {
+            background: linear-gradient(
+                90deg,
+                #00e5ff,
+                #a970ff
+            );
+
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            color: #929eb3;
+            font-size: 14px;
+            font-weight: 600;
+
+            transition: .3s;
+        }
+
+        .nav-links a:hover,
+        .nav-links .active {
+            color: #00e5ff;
+        }
+
+        .nav-button {
+            padding: 11px 18px;
+
+            border-radius: 9px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #00e5ff,
+                    #7c4dff
+                );
+
+            font-weight: 700;
+            font-size: 13px;
+        }
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .hero {
+            max-width: 1250px;
+            margin: auto;
+
+            padding: 85px 25px 70px;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+
+            align-items: center;
+        }
+
+        .hero-tag {
+            color: #00e5ff;
+
+            font-size: 12px;
+            font-weight: 800;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 18px;
+        }
+
+        .hero h1 {
+            font-size: clamp(45px, 5vw, 70px);
+            line-height: 1.02;
+
+            letter-spacing: -3px;
+
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            display: block;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #00e5ff,
+                    #8b5cf6
+                );
+
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .hero p {
+            color: #8591a7;
+
+            font-size: 17px;
+            line-height: 1.8;
+
+            max-width: 600px;
+
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 13px;
+            flex-wrap: wrap;
+        }
+
+        .primary-btn {
+            display: inline-flex;
+            gap: 10px;
+            align-items: center;
+
+            padding: 14px 22px;
+
+            border-radius: 9px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #00e5ff,
+                    #7c4dff
+                );
+
+            font-weight: 800;
+
+            transition: .3s;
+        }
+
+        .primary-btn:hover {
+            transform: translateY(-4px);
+
+            box-shadow:
+                0 15px 35px
+                rgba(0,229,255,.18);
+        }
+
+        .secondary-btn {
+            padding: 14px 22px;
+
+            border: 1px solid #29364c;
+            border-radius: 9px;
+
+            color: #aab4c7;
+
+            font-weight: 700;
+
+            transition: .3s;
+        }
+
+        .secondary-btn:hover {
+            border-color: #00e5ff;
+            color: #00e5ff;
+        }
+
+        /* =====================================================
+           DASHBOARD CARD
+        ===================================================== */
+
+        .dashboard {
+            background: #0a101c;
+
+            border: 1px solid #202d43;
+
+            border-radius: 18px;
+
+            padding: 25px;
+
+            box-shadow:
+                0 30px 70px
+                rgba(0,0,0,.5);
+        }
+
+        .dashboard-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            margin-bottom: 25px;
+        }
+
+        .dashboard-top h3 {
+            font-size: 18px;
+        }
+
+        .online {
+            color: #55e68a;
+            font-size: 12px;
+        }
+
+        .progress-box {
+            background: #101827;
+            padding: 20px;
+
+            border-radius: 13px;
+
+            margin-bottom: 15px;
+        }
+
+        .progress-title {
+            display: flex;
+            justify-content: space-between;
+
+            color: #aeb8c9;
+
+            font-size: 13px;
+
+            margin-bottom: 12px;
+        }
+
+        .progress-bar {
+            height: 8px;
+
+            background: #202c3f;
+
+            border-radius: 50px;
+
+            overflow: hidden;
+        }
+
+        .progress {
+            height: 100%;
+            width: 72%;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #00e5ff,
+                    #7c4dff
+                );
+
+            border-radius: 50px;
+        }
+
+        .mini-courses {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 12px;
+        }
+
+        .mini-course {
+            padding: 17px;
+
+            background: #101827;
+
+            border: 1px solid #1d2a3f;
+
+            border-radius: 12px;
+        }
+
+        .mini-course strong {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .mini-course small {
+            color: #68758b;
+        }
+
+        /* =====================================================
+           STATS
+        ===================================================== */
+
+        .stats {
+            max-width: 1100px;
+            margin: auto;
+
+            padding: 30px 25px;
+
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+
+            gap: 15px;
+        }
+
+        .stat {
+            text-align: center;
+
+            padding: 20px;
+
+            border: 1px solid #1b273a;
+            border-radius: 13px;
+
+            background: #090f1a;
+        }
+
+        .stat h2 {
+            color: #00e5ff;
+            font-size: 30px;
+        }
+
+        .stat p {
+            color: #68758b;
+            font-size: 13px;
+        }
+
+        /* =====================================================
+           SECTION
+        ===================================================== */
+
+        section {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section {
+            padding: 100px 25px;
+        }
+
+        .section-label {
+            color: #00e5ff;
+
+            font-size: 12px;
+            font-weight: 800;
+
+            letter-spacing: 2px;
+        }
+
+        .section-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+
+            margin-bottom: 35px;
+        }
+
+        .section-title h2 {
+            font-size: 40px;
+            margin-top: 8px;
+
+            letter-spacing: -1px;
+        }
+
+        .section-title p {
+            color: #707d92;
+            margin-top: 7px;
+        }
+
+        .view-all {
+            color: #00e5ff;
+            font-size: 13px;
+            font-weight: 800;
+        }
+
+        /* =====================================================
+           BRANCHES
+        ===================================================== */
+
+        .branch-grid {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 18px;
+        }
+
+        .branch {
+            padding: 28px;
+
+            background: #0b111e;
+
+            border: 1px solid #1c293d;
+
+            border-radius: 16px;
+
+            transition: .35s;
+        }
+
+        .branch:hover {
+            transform: translateY(-7px);
+            border-color: #00e5ff;
+
+            box-shadow:
+                0 15px 45px
+                rgba(0,229,255,.06);
+        }
+
+        .branch-icon {
+            width: 55px;
+            height: 55px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: #111b2b;
+
+            border-radius: 13px;
+
+            font-size: 27px;
+
+            margin-bottom: 18px;
+        }
+
+        .branch h3 {
+            margin-bottom: 8px;
+        }
+
+        .branch p {
+            color: #77849a;
+
+            font-size: 14px;
+
+            line-height: 1.7;
+
+            margin-bottom: 17px;
+        }
+
+        .branch a {
+            color: #00e5ff;
+
+            font-size: 13px;
+            font-weight: 800;
+        }
+
+        /* =====================================================
+           COURSES
+        ===================================================== */
+
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 18px;
+        }
+
+        .course {
+            background: #0b111e;
+
+            border: 1px solid #1c293d;
+
+            border-radius: 16px;
+
+            overflow: hidden;
+
+            transition: .35s;
+        }
+
+        .course:hover {
+            transform: translateY(-6px);
+            border-color: #7c4dff;
+        }
+
+        .course-image {
+            height: 130px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 45px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(0,229,255,.09),
+                    rgba(124,77,255,.12)
+                );
+        }
+
+        .course-content {
+            padding: 23px;
+        }
+
+        .course-tag {
+            color: #00e5ff;
+
+            font-size: 11px;
+            font-weight: 800;
+
+            letter-spacing: 1px;
+        }
+
+        .course h3 {
+            margin: 8px 0;
+        }
+
+        .course p {
+            color: #77849a;
+
+            font-size: 13px;
+
+            line-height: 1.6;
+
+            margin-bottom: 18px;
+        }
+
+        .course-info {
+            display: flex;
+            justify-content: space-between;
+
+            color: #647187;
+
+            font-size: 12px;
+
+            border-top: 1px solid #1c2739;
+
+            padding-top: 15px;
+        }
+
+        /* =====================================================
+           LEARNING PROCESS
+        ===================================================== */
+
+        .process {
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 18px;
+        }
+
+        .step {
+            position: relative;
+
+            padding: 30px;
+
+            border: 1px solid #1c293d;
+            border-radius: 15px;
+
+            background: #0a101b;
+        }
+
+        .number {
+            color: #00e5ff;
+
+            font-size: 13px;
+            font-weight: 900;
+
+            margin-bottom: 18px;
+        }
+
+        .step h3 {
+            margin-bottom: 9px;
+        }
+
+        .step p {
+            color: #748198;
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+        /* =====================================================
+           PROJECT CTA
+        ===================================================== */
+
+        .project-banner {
+            margin: 50px 25px 100px;
+
+            padding: 65px 35px;
+
+            text-align: center;
+
+            border-radius: 20px;
+
+            border: 1px solid #26344c;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(0,229,255,.06),
+                    rgba(124,77,255,.1)
+                );
+        }
+
+        .project-banner h2 {
+            font-size: 45px;
+            margin-bottom: 10px;
+        }
+
+        .project-banner p {
+            color: #77849a;
+            margin-bottom: 28px;
+        }
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer {
+            border-top: 1px solid #182337;
+
+            padding: 50px 25px 25px;
+
+            text-align: center;
+        }
+
+        .footer-logo {
+            font-size: 24px;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .footer-logo span {
+            color: #00e5ff;
+        }
+
+        .footer-text {
+            color: #647187;
+            margin-bottom: 25px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+
+            margin-bottom: 30px;
+        }
+
+        .footer-links a {
+            color: #7e8a9e;
+            font-size: 13px;
+        }
+
+        .footer-links a:hover {
+            color: #00e5ff;
+        }
+
+        .copyright {
+            border-top: 1px solid #182337;
+
+            padding-top: 20px;
+
+            color: #4f5c71;
+            font-size: 12px;
+        }
+
+        /* =====================================================
+           MOBILE
+        ===================================================== */
+
+        @media(max-width:900px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-content {
+                text-align: center;
+            }
+
+            .hero p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .branch-grid,
+            .course-grid {
+                grid-template-columns: repeat(2,1fr);
+            }
+
+            .process {
+                grid-template-columns: repeat(2,1fr);
+            }
+
+            .stats {
+                grid-template-columns: repeat(2,1fr);
+            }
+        }
+
+        @media(max-width:600px) {
+
+            .navbar {
+                padding: 12px 15px;
+            }
+
+            .logo {
+                font-size: 19px;
+            }
+
+            .logo-icon {
+                width: 34px;
+                height: 34px;
+            }
+
+            .nav-button {
+                padding: 9px 12px;
+                font-size: 11px;
+            }
+
+            .hero {
+                padding: 65px 18px 50px;
+            }
+
+            .hero h1 {
+                font-size: 45px;
+                letter-spacing: -2px;
+            }
+
+            .stats {
+                grid-template-columns: 1fr 1fr;
+                padding: 20px;
+            }
+
+            .branch-grid,
+            .course-grid,
+            .process {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                display: block;
+            }
+
+            .view-all {
+                display: inline-block;
+                margin-top: 12px;
+            }
+
+            .project-banner {
+                margin: 20px 15px 70px;
+                padding: 50px 20px;
+            }
+
+            .project-banner h2 {
+                font-size: 34px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<header>
+
+    <nav class="navbar">
+
+        <a href="index.html" class="logo">
+
+            <div class="logo-icon">
+                &lt;/&gt;
+            </div>
+
+            <span>CodingWalle</span>
+
+        </a>
+
+
+        <div class="nav-links">
+
+            <a href="index.html">Index</a>
+
+            <a href="home.html" class="active">
+                Home
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="courses.html">
+                Courses
+            </a>
+
+            <a href="reviews.html">
+                Reviews
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </div>
+
+
+        <a href="courses.html" class="nav-button">
+            Start Learning →
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="hero-tag">
+            WELCOME BACK, FUTURE DEVELOPER
+        </div>
+
+
+        <h1>
+
+            Learn Skills.
+            <span>Build Things.</span>
+
+        </h1>
+
+
+        <p>
+
+            Welcome to the CodingWalle learning space.
+            Explore coding branches, discover courses, practice
+            your skills and turn your ideas into real projects.
+
+        </p>
+
+
+        <div class="hero-buttons">
+
+            <a href="courses.html" class="primary-btn">
+                Explore Courses →
+            </a>
+
+            <a href="#branches" class="secondary-btn">
+                Explore Branches
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- DASHBOARD -->
+
+    <div class="dashboard">
+
+        <div class="dashboard-top">
+
+            <h3>
+                Learning Dashboard
+            </h3>
+
+            <span class="online">
+                ● Learning Mode
+            </span>
+
+        </div>
+
+
+        <div class="progress-box">
+
+            <div class="progress-title">
+
+                <span>
+                    Your Learning Journey
+                </span>
+
+                <strong>
+                    72%
+                </strong>
+
+            </div>
+
+
+            <div class="progress-bar">
+
+                <div class="progress"></div>
+
+            </div>
+
+        </div>
+
+
+        <div class="mini-courses">
+
+            <div class="mini-course">
+
+                <strong>
+                    HTML & CSS
+                </strong>
+
+                <small>
+                    Web Development
+                </small>
+
+            </div>
+
+
+            <div class="mini-course">
+
+                <strong>
+                    Python
+                </strong>
+
+                <small>
+                    Programming
+                </small>
+
+            </div>
+
+
+            <div class="mini-course">
+
+                <strong>
+                    JavaScript
+                </strong>
+
+                <small>
+                    Web Development
+                </small>
+
+            </div>
+
+
+            <div class="mini-course">
+
+                <strong>
+                    Cyber Security
+                </strong>
+
+                <small>
+                    Security
+                </small>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     STATS
+===================================================== -->
+
+<div class="stats">
+
+    <div class="stat">
+
+        <h2>05</h2>
+
+        <p>
+            Learning Branches
+        </p>
+
+    </div>
+
+
+    <div class="stat">
+
+        <h2>30+</h2>
+
+        <p>
+            Courses
+        </p>
+
+    </div>
+
+
+    <div class="stat">
+
+        <h2>100+</h2>
+
+        <p>
+            Topics
+        </p>
+
+    </div>
+
+
+    <div class="stat">
+
+        <h2>∞</h2>
+
+        <p>
+            Learning Possibilities
+        </p>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     BRANCHES
+===================================================== -->
+
+<section class="section" id="branches">
+
+    <div class="section-title">
+
+        <div>
+
+            <div class="section-label">
+                FIVE LEARNING PATHS
+            </div>
+
+            <h2>
+                Choose Your Branch
+            </h2>
+
+            <p>
+                Start where your curiosity takes you.
+            </p>
+
+        </div>
+
+
+        <a href="courses.html" class="view-all">
+            View All Courses →
+        </a>
+
+    </div>
+
+
+
+    <div class="branch-grid">
+
+
+        <div class="branch">
+
+            <div class="branch-icon">
+                🌐
+            </div>
+
+            <h3>
+                Web Development
+            </h3>
+
+            <p>
+                Create websites and modern web applications
+                using HTML, CSS, JavaScript, React and Node.js.
+            </p>
+
+            <a href="courses.html#web">
+                Explore Web Development →
+            </a>
+
+        </div>
+
+
+
+        <div class="branch">
+
+            <div class="branch-icon">
+                💻
+            </div>
+
+            <h3>
+                Programming
+            </h3>
+
+            <p>
+                Build strong programming fundamentals with
+                C, C++, Java, Python and more.
+            </p>
+
+            <a href="courses.html#programming">
+                Explore Programming →
+            </a>
+
+        </div>
+
+
+
+        <div class="branch">
+
+            <div class="branch-icon">
+                🤖
+            </div>
+
+            <h3>
+                AI & Data Science
+            </h3>
+
+            <p>
+                Explore artificial intelligence, machine
+                learning, Python and data science.
+            </p>
+
+            <a href="courses.html#ai">
+                Explore AI & Data →
+            </a>
+
+        </div>
+
+
+
+        <div class="branch">
+
+            <div class="branch-icon">
+                🗄️
+            </div>
+
+            <h3>
+                Database & Backend
+            </h3>
+
+            <p>
+                Learn databases, SQL, APIs, backend concepts
+                and server-side technologies.
+            </p>
+
+            <a href="courses.html#database">
+                Explore Backend →
+            </a>
+
+        </div>
+
+
+
+        <div class="branch">
+
+            <div class="branch-icon">
+                🛡️
+            </div>
+
+            <h3>
+                Cyber Security
+            </h3>
+
+            <p>
+                Learn Linux, networking and cybersecurity
+                fundamentals in a structured path.
+            </p>
+
+            <a href="courses.html#security">
+                Explore Security →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     POPULAR COURSES
+===================================================== -->
+
+<section class="section">
+
+    <div class="section-title">
+
+        <div>
+
+            <div class="section-label">
+                POPULAR COURSES
+            </div>
+
+            <h2>
+                Start With These
+            </h2>
+
+            <p>
+                Beginner-friendly courses to begin your journey.
+            </p>
+
+        </div>
+
+
+        <a href="courses.html" class="view-all">
+            See All Courses →
+        </a>
+
+    </div>
+
+
+
+    <div class="course-grid">
+
+
+        <div class="course">
+
+            <div class="course-image">
+                🌐
+            </div>
+
+            <div class="course-content">
+
+                <div class="course-tag">
+                    WEB DEVELOPMENT
+                </div>
+
+                <h3>
+                    HTML & CSS
+                </h3>
+
+                <p>
+                    Learn how websites are structured and styled
+                    from the ground up.
+                </p>
+
+                <div class="course-info">
+
+                    <span>
+                        Beginner
+                    </span>
+
+                    <span>
+                        20+ Topics
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="course">
+
+            <div class="course-image">
+                ⚡
+            </div>
+
+            <div class="course-content">
+
+                <div class="course-tag">
+                    PROGRAMMING
+                </div>
+
+                <h3>
+                    JavaScript
+                </h3>
+
+                <p>
+                    Learn programming for the web and create
+                    interactive experiences.
+                </p>
+
+                <div class="course-info">
+
+                    <span>
+                        Beginner
+                    </span>
+
+                    <span>
+                        25+ Topics
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="course">
+
+            <div class="course-image">
+                🐍
+            </div>
+
+            <div class="course-content">
+
+                <div class="course-tag">
+                    PROGRAMMING
+                </div>
+
+                <h3>
+                    Python
+                </h3>
+
+                <p>
+                    Build your programming foundation with one
+                    of the most versatile languages.
+                </p>
+
+                <div class="course-info">
+
+                    <span>
+                        Beginner
+                    </span>
+
+                    <span>
+                        30+ Topics
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="course">
+
+            <div class="course-image">
+                🗄️
+            </div>
+
+            <div class="course-content">
+
+                <div class="course-tag">
+                    DATABASE
+                </div>
+
+                <h3>
+                    SQL & Databases
+                </h3>
+
+                <p>
+                    Understand data, databases, queries and
+                    database fundamentals.
+                </p>
+
+                <div class="course-info">
+
+                    <span>
+                        Beginner
+                    </span>
+
+                    <span>
+                        20+ Topics
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="course">
+
+            <div class="course-image">
+                🤖
+            </div>
+
+            <div class="course-content">
+
+                <div class="course-tag">
+                    AI
+                </div>
+
+                <h3>
+                    AI Fundamentals
+                </h3>
+
+                <p>
+                    Discover artificial intelligence and
+                    understand how modern AI works.
+                </p>
+
+                <div class="course-info">
+
+                    <span>
+                        Beginner
+                    </span>
+
+                    <span>
+                        15+ Topics
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="course">
+
+            <div class="course-image">
+                🛡️
+            </div>
+
+            <div class="course-content">
+
+                <div class="course-tag">
+                    SECURITY
+                </div>
+
+                <h3>
+                    Cyber Security Basics
+                </h3>
+
+                <p>
+                    Explore security concepts, networking,
+                    Linux and digital safety.
+                </p>
+
+                <div class="course-info">
+
+                    <span>
+                        Beginner
+                    </span>
+
+                    <span>
+                        18+ Topics
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     HOW IT WORKS
+===================================================== -->
+
+<section class="section">
+
+    <div class="section-title">
+
+        <div>
+
+            <div class="section-label">
+                HOW CODINGWALLE WORKS
+            </div>
+
+            <h2>
+                Learn. Practice. Build.
+            </h2>
+
+            <p>
+                A simple path from your first line of code to real projects.
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="process">
+
+
+        <div class="step">
+
+            <div class="number">
+                01 / CHOOSE
+            </div>
+
+            <h3>
+                Choose a Branch
+            </h3>
+
+            <p>
+                Select the technology path that matches
+                your interests and goals.
+            </p>
+
+        </div>
+
+
+
+        <div class="step">
+
+            <div class="number">
+                02 / LEARN
+            </div>
+
+            <h3>
+                Learn Concepts
+            </h3>
+
+            <p>
+                Understand the fundamentals and build a
+                strong technical foundation.
+            </p>
+
+        </div>
+
+
+
+        <div class="step">
+
+            <div class="number">
+                03 / PRACTICE
+            </div>
+
+            <h3>
+                Practice
+            </h3>
+
+            <p>
+                Improve your skills by solving coding
+                problems and experimenting.
+            </p>
+
+        </div>
+
+
+
+        <div class="step">
+
+            <div class="number">
+                04 / BUILD
+            </div>
+
+            <h3>
+                Build Projects
+            </h3>
+
+            <p>
+                Turn your knowledge into useful real-world
+                projects and experiences.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PROJECT CTA
+===================================================== -->
+
+<div class="project-banner">
+
+    <div class="section-label">
+        READY TO BUILD?
+    </div>
+
+    <h2>
+        Your Next Project Starts Here.
+    </h2>
+
+    <p>
+        Explore courses, learn the technology and start creating.
+    </p>
+
+    <a href="courses.html" class="primary-btn">
+        Explore Courses →
+    </a>
+
+</div>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <div class="footer-logo">
+
+        <span>&lt;/&gt;</span>
+        CodingWalle
+
+    </div>
+
+
+    <p class="footer-text">
+        Learn. Code. Build. Become.
+    </p>
+
+
+    <div class="footer-links">
+
+        <a href="index.html">
+            Index
+        </a>
+
+        <a href="home.html">
+            Home
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+        <a href="courses.html">
+            Courses
+        </a>
+
+        <a href="reviews.html">
+            Reviews
+        </a>
+
+        <a href="contact.html">
+            Contact
+        </a>
+
+    </div>
+
+
+    <div class="copyright">
+
+        © 2026 CodingWalle. All Rights Reserved.
+
+    </div>
+
+</footer>
+
+
+</body>
+</html>
